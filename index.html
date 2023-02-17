@@ -1,0 +1,26 @@
+<html lang = "en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src = "https://unpkg.com/vue@3.0.2"></script>
+    <!-- install live server and vetur -->
+    <!-- atom keymap / better comments / code spell checker / colorize / copy relative path / css peek / eslint / htmlcss support / javascript code snippets -->
+    <!-- jquery codesnippet prettier material icon theme -->
+</head>
+<body>
+    <h1>Hello !!</h1>
+    <div id="app">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+
+        <button v-on:click="age++">Increase Age</button>
+        <button v-on:click="age--">Decrease Age</button>
+        <div @click = "changeTitle('Oathbringer')">Change Book Title to Something Else</div>
+    </div>
+
+
+
+    <script src = "app.js"></script>
+</body>
+</html>
