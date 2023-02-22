@@ -14,7 +14,8 @@
     <div id="app">
 			<div v-if = "showBooks">
         <ul>
-        <li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleFav(book)">
+        <li v-for="book in filteredBooks" :class="{ fav: book.isFav }" @click="toggleFav(book)">
+          <img :src="book.img" :alt="book.title">
           <h3>{{ book.title }}</h3>
           <p>{{ book.author }}</p>
         </li>
@@ -31,11 +32,11 @@
 						Show Books
 					</span>
 				</button>
-                <br>
-                <div class="box" @mouseover = "handleEvent($event, 5)">mouseover (enter)</div>
+                
+                <!-- <div class="box" @mouseover = "handleEvent($event, 5)">mouseover (enter)</div>
                 <div class="box" @mouseleave = "handleEvent">mouse leave</div>
                 <div class="box" @dblclick = "handleEvent">double click</div>
-                <div class="box" @mousemove = "handleMouseMove">position - {{ x }} {{ y }}</div>
+                <div class="box" @mousemove = "handleMouseMove">position - {{ x }} {{ y }}</div> -->
 				</div>
    
 
